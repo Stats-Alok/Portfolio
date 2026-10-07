@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ACADEMIC_DATA } from '../data/academicData';
 import {
   X,
   Printer,
