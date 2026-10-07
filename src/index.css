@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-page: #FAF7F2;
+    --text-primary: #1C1917;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #1C1917;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Subtle modern warm academic grid */
+.academic-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(120, 95, 60, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 95, 60, 0.04) 1px, transparent 1px);
+}
+
+.academic-dots {
+  background-image: radial-gradient(rgba(120, 95, 60, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Crisp Clean Warm Academic Card Styles */
+.scholar-card {
+  background: #FFFDF9;
+  border: 1px solid #E6DFD1;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(70, 50, 20, 0.03), 0 1px 2px 0 rgba(70, 50, 20, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.scholar-card:hover {
+  border-color: #D8CFBF;
+  box-shadow: 0 6px 14px -2px rgba(70, 50, 20, 0.06), 0 3px 6px -2px rgba(70, 50, 20, 0.03);
+}
+
+/* Custom Warm Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD5C4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5B9A4;
+}
+
+/* Print Styles for Academic CV */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .print-hidden, nav, button, footer, .fixed {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .academic-cv-print {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
